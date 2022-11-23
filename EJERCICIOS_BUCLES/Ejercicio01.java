@@ -4,7 +4,7 @@ package EJERCICIOS_BUCLES;
 public class Ejercicio01 {
 
     public static void main(String[] args) {
-        
+        k
         for (int i=0;i<=100;i=i+5){
             System.out.println(i);
         }
