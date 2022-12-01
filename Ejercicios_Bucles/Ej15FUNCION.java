@@ -12,7 +12,7 @@ public class Ej15FUNCION {
         
         for (int i=1;i<=ex;i++){
             resultado=b*resultado;
-            
+            System.out.println(resultado);
         }
         return resultado;
     }
