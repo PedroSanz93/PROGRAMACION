@@ -147,7 +147,7 @@ public class Practica_REPASO {
                     for (int j:numeros){
                         if(j%2==0){
                             arrPar=Arrays.copyOf(arrPar , arrPar.length+1);
-                            arrPar[arrPar.length]=j;
+                            arrPar[arrPar.length-1]=j;
                         } else {
                             arrImpar=Arrays.copyOf(arrImpar , arrImpar.length+1);
                             arrImpar[arrImpar.length-1]=j; // falla aqui
