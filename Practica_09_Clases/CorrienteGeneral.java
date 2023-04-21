@@ -102,5 +102,6 @@ class Camiseta extends Fabricante{
         this.fechaFab = fechaFab;
     }
 }    
+// atributos con private con getter y setter con atributos en public se llaman directamente
 // buscar en ejercicios de clases como el de vehiculo-aereo-avion
 // CodProducto, IDTienda, precio, materialRecliclado, marca, fechaFab
