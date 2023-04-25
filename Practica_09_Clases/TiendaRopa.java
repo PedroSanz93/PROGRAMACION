@@ -20,7 +20,7 @@ public class TiendaRopa {
         Scanner sc;
         sc = new Scanner(System.in);
         // demostracion ficticia de introducir un nuevo producto, en la practica real iria enlazado con una base de datos donde estaria todo el inventario del comercio
-        System.out.println("Introduce nuevo prodcuto: ");
+        System.out.println("Introduce nuevo producto: ");
         int CodProducto=sc.nextInt();
         System.out.println("Introduce precio del producto: ");
         double precio=sc.nextDouble();

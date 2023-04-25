@@ -1,12 +1,10 @@
 
 package Practica_09_Clases;
 
-
 class Camiseta extends Fabricante{
-
-    
+  
     public int talla;
-        public int color;
+    public int color;
         
         public Camiseta(int CodProducto, int IDTienda, double precio, boolean materialRecliclado, String marca,int fechaFab ) {
         super(CodProducto, IDTienda, precio);

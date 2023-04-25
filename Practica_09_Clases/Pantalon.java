@@ -4,9 +4,9 @@ package Practica_09_Clases;
 class Pantalon extends Fabricante{
 
     public int talla;
-        public int color;
+    public int color;
         
-         public Pantalon(int CodProducto, int IDTienda, double precio, boolean materialRecliclado, String marca,int fechaFab ) {
+        public Pantalon(int CodProducto, int IDTienda, double precio, boolean materialRecliclado, String marca,int fechaFab ) {
         super(CodProducto, IDTienda, precio);
         this.precio = precio;
         this.materialRecliclado = materialRecliclado;
@@ -58,7 +58,6 @@ class Pantalon extends Fabricante{
         return precio;
     }
 
-    // y aqui con el constructor heredo de la subclase fabricante todos los metodos y atributos, habiendo heredado ya los metodos y atributos de la superclase tiendaropa
     public void setPrecio(double precio) {
         this.precio = precio;
     }      
