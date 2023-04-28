@@ -82,107 +82,117 @@ public class ProgramaTiendaRopa {
                 z3.DatosProducto();
                 break;
                 case 2:
-                //Camiseta cNueva = new Camiseta(sc.nextInt(), sc.nextDouble(),sc.nextInt() , sc.nextInt(), sc.nextLine());
                 System.out.println("Introduce un nuevo producto");
-                
                 int opcionProd=1;
-                while(opcionProd!=3){
-                    
+                while(opcionProd!=4){
+                    System.out.println("Para agregar un nuevo producto: ");
+                    System.out.println("Opcion 1: CAMISETA");
+                    System.out.println("---------------------------------------------------------------------");
+                    System.out.println("Opcion 2: PANTALON");
+                    System.out.println("---------------------------------------------------------------------");
+                    System.out.println("Opcion 3: ZAPATILLAS");
+                    System.out.println("---------------------------------------------------------------------");
+                    System.out.println("Opcion 4: VOLVER ATRAS");
+                    System.out.println("---------------------------------------------------------------------");
+                    opcionProd=sc.nextInt();
                     switch(opcionProd){
-                        case 1:
+                        case 1: 
                         System.out.println("Producto/Camiseta");
-                        Camiseta cNueva;
+                        
                         System.out.println("---------------------------------------------------------------------");
                         System.out.println("PRECIO: ");
-                        double precioN=sc.nextDouble();
-                        cNueva.precio(precioN);
+                        double precioA=sc.nextDouble();
+                        
                         System.out.println("---------------------------------------------------------------------");
                         System.out.println("CODIGO DEL MATERIAL");
+                        int materialA=sc.nextInt();
                         
                         System.out.println("---------------------------------------------------------------------");
                         System.out.println("FECHA DE LA COLECCION");
+                        int fechaA=sc.nextInt();
                         
                         System.out.println("---------------------------------------------------------------------");
                         System.out.println("MARCA: ");
-                        
+                        String marcaA=sc.nextLine();
+                        // Aqui esta el problema, todo bien pero en el menu se salta MARCA y no deja meter el dato                     
+                        Camiseta cNueva = new Camiseta(1, precioA, materialA, fechaA, marcaA);
                         System.out.println("---------------------------------------------------------------------");
                         System.out.println("TALLA: ");
+                        String tallaA=sc.nextLine();
+                        cNueva.setTalla(tallaA);
                         
                         System.out.println("---------------------------------------------------------------------");    
                         System.out.println("COLOR: ");
+                        String colorA=sc.nextLine();
+                        cNueva.setColor(colorA);
                         
-                        System.out.println("---------------------------------------------------------------------");                       
-                            
+                        System.out.println("CAMISETA REGISTRADA EN ALMACEN");
                         break;
                         case 2:
                         System.out.println("Producto/Pantalon");
-                                                System.out.println("IDTIENDA: ");
-                        
-                        System.out.println("---------------------------------------------------------------------");
                         System.out.println("PRECIO: ");
-                        
+                        double precioB=sc.nextDouble();
                         System.out.println("---------------------------------------------------------------------");
                         System.out.println("CODIGO DEL MATERIAL");
-                        
+                        int materialB=sc.nextInt();
                         System.out.println("---------------------------------------------------------------------");
                         System.out.println("FECHA DE LA COLECCION");
-                        
+                        int fechaB=sc.nextInt();
                         System.out.println("---------------------------------------------------------------------");
                         System.out.println("MARCA: ");
-                        
+                        String marcaB=sc.nextLine();
                         System.out.println("---------------------------------------------------------------------");
                         System.out.println("TALLA: ");
-                        
+                        int tallaB=sc.nextInt();
                         System.out.println("---------------------------------------------------------------------");    
                         System.out.println("COLOR: ");
-                        
+                        String colorB=sc.nextLine();
                         System.out.println("---------------------------------------------------------------------");  
+                        Pantalon pNuevo = new Pantalon(1, precioB, materialB, fechaB, marcaB);
+                        pNuevo.setTalla(tallaB);
+                        pNuevo.setColor(colorB);
+                        System.out.println("PANTALON REGISTRADA EN ALMACEN");
                         break;
                         case 3:
                         System.out.println("Producto/Zapatillas");
-                                                System.out.println("IDTIENDA: ");
-                        
-                        System.out.println("---------------------------------------------------------------------");
                         System.out.println("PRECIO: ");
-                        
+                        double precioC=sc.nextDouble();
                         System.out.println("---------------------------------------------------------------------");
                         System.out.println("CODIGO DEL MATERIAL");
-                        
+                        int materialC=sc.nextInt();
                         System.out.println("---------------------------------------------------------------------");
                         System.out.println("FECHA DE LA COLECCION");
-                        
+                        int fechaC=sc.nextInt();
                         System.out.println("---------------------------------------------------------------------");
                         System.out.println("MARCA: ");
-                        
+                        String marcaC=sc.nextLine();
                         System.out.println("---------------------------------------------------------------------");
                         System.out.println("TALLA: ");
-                        
+                        int tallaC=sc.nextInt();
                         System.out.println("---------------------------------------------------------------------");    
                         System.out.println("COLOR: ");
-                        
+                        String colorC=sc.nextLine();
                         System.out.println("---------------------------------------------------------------------");  
+                        Zapatillas zNuevas = new Zapatillas(1, precioC, materialC, fechaC, marcaC);
+                        zNuevas.setTalla(tallaC);
+                        zNuevas.setColor(colorC);
+                        System.out.println("ZAPATILLAS REGISTRADAS EN ALMACEN");
                         break;
-                        
+                        case 4:
+                        System.out.println("VOLVIENDO ATRAS");
                         default:
                         System.err.println("OPCION INCORRECTA");
                         break;
-                    }
-                    
-                }
-                    
+                    } 
+                }   
                 break;
                 case 3:
                 System.out.println("Saliendo de Gestion de inventario");
                 break;
                 default:
                 System.err.println("Introduce opcion correcta");
-                break;    
-                
+                break;        
             }
-                
-  
-        }
-
-        
+        } 
     }
 }
