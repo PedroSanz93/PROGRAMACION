@@ -30,7 +30,6 @@ class Zapatillas extends Fabricante{
     public void setColor(String color) {
         this.color = color;
     }
-
     // Atributos sobrescritos de subclase Fabricante
     @Override
     public int getCODmaterial() {
@@ -51,22 +50,20 @@ class Zapatillas extends Fabricante{
     public void setFechaFab(int fechaFab) {
         this.fechaFab = fechaFab;
     }
-
-    // Atributo heredado de superclase TiendaRopa
+    // Motodos heredados de superclase TiendaRopa
+    @Override
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+    
+    @Override
     public double getPrecio() {
         return precio;
     }
-
-    public void setPrecio(double precio) {
-        this.precio = precio;
-    }   
-       
-    public void DatosProducto(){    
-    System.out.println("------------->Talla: "+talla);
-    System.out.println("------------>Color: "+color);
-    System.out.println("----------->Codido del material: "+CODmaterial);
-    System.out.println("---------->Marca: "+marca);
-    System.out.println("--------->Año de la coleccion: "+fechaFab);
-    System.out.println("-------->PVP: "+precio+" Euros");
+  
+    @Override
+    public String toString(){
+        return "Zapatilla{" + "talla=" + talla + ", color=" + color + ", marca=" + marca + 
+                ", Codigo material= " +CODmaterial+ ", Año de coleccion= " + fechaFab + ", Precio=  "+precio+'}';
     }
 }
