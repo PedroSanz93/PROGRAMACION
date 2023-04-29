@@ -2,7 +2,7 @@
 package Practica_09_Clases;
 
 class Camiseta extends Fabricante{
-  
+ 
     public String talla;
     public String color;
     public String marca;
@@ -52,21 +52,20 @@ class Camiseta extends Fabricante{
         this.fechaFab = fechaFab;
     }
 
-    // Atributo heredado de superclase TiendaRopa
+    // Atributo heredado de superclase TiendaRopa  
+    @Override
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+    @Override
     public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
-    }
-    
-    public void DatosProducto(){
-        System.out.println("------------->Talla: "+talla);
-        System.out.println("------------>Color: "+color);
-        System.out.println("----------->Codido del material: "+CODmaterial);
-        System.out.println("---------->Marca: "+marca);
-        System.out.println("--------->Año de la coleccion: "+fechaFab);
-        System.out.println("-------->PVP: "+precio+" Euros");
+    @Override 
+    // El override esta sobreescribiendo el metodo de la superclase ya que aqui lo estoy implementando con todos los atributos heredados
+    public String toString() {
+        return "Camiseta{" + "talla=" + talla + ", color=" + color + ", marca=" + marca + 
+                ", Codigo material= " +CODmaterial+ ", Año de coleccion= " + fechaFab + ", Precio=  "+precio+'}';
     }
 }
