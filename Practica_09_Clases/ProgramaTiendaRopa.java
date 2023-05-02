@@ -267,7 +267,7 @@ public class ProgramaTiendaRopa {
                     // llamando al metodo getPrecio me da el parametro precio de los objetos seleccionados
                 }
                 System.out.println("---------------------------------------------------------------------"); 
-                System.out.println("Total: "+precioCompra);
+                System.out.println("Total: "+precioCompra+" EUROS");
                 // aqui igualo la opcion del while a 4 para que salga del bucle, controlando de esta manera la salida del switch y el bucle
                 opcion=4;
                 break;
