@@ -1,4 +1,3 @@
-
 package ProyectoFinal;
 
 import java.sql.SQLException;
@@ -24,6 +23,7 @@ public class ProgramaBayaPloh {
         String color;
         String tipoPrenda = null;
         while (n != 5) { //WHILE, Aquí creamos un bucle para hacer un menú, mientras no usemos el 5 , el bucle se repite
+
             System.out.println("-------------------------------------------------"); //Imprimimos por pantalla
             System.out.println("Bienvenido a BayaPloh, tu aplicación de compra/venta de ropa, sonido y videojuegos"); //Imprimimos por pantalla
             System.out.println("Esta aplicación ha sido realizada por José López y Pedro Sanz alumnos 1ºDAM curso 2022/2023 "); //Imprimimos por pantalla
@@ -38,9 +38,8 @@ public class ProgramaBayaPloh {
             switch (n) { //SWITCH PRINCIPAL , Creamos un menú con el switch para poder elegir cualquiera de las opciones y cada una haga un función
                 case 1: //Primera opción del switch->VER CATALOGO
                     // SWITCH para ver los productos que estan en la BBDD
-                    int q=sc.nextInt(); // variable para la opcion de este switch
                     //q=0;
-                    while(q!=4){
+                    int q=1;
                     System.out.println("-------------------------------------------------");
                     System.out.println("La opcion 1 es ROPA: ");
                     System.out.println("-------------------------------------------------");
@@ -50,6 +49,8 @@ public class ProgramaBayaPloh {
                     System.out.println("-------------------------------------------------");
                     System.out.println("La opcion 4 es ATRAS ");
                     System.out.println("-------------------------------------------------");
+                    q=sc.nextInt(); // variable para la opcion de este switch
+                    while(q!=4){
                         switch(q){
                             case 1:
                                 String bbdd = "jdbc:mysql://localhost:3306/bayaploh?useUnicode=true&characterEncoding=UTF-8";
@@ -76,6 +77,8 @@ public class ProgramaBayaPloh {
                                 } catch (SQLException e) {
                                     System.err.println("Error al conectar con la BBDD: " + e.getMessage());
                                 }
+                                q=4;
+                                //n=1;
                             break;
                             case 2:
                                 
